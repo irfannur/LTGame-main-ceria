@@ -8,10 +8,13 @@ export const useGameStore = defineStore('game', {
     completedLevels: JSON.parse(localStorage.getItem('sm_completed') || '[]'),
     totalStars: parseInt(localStorage.getItem('sm_stars') || '0', 10),
 
-    // Auth & Token State (Menggunakan penamaan standar game sebelumnya)
+    // Auth & Token State
     token: localStorage.getItem('tp_token') || localStorage.getItem('sm_token') || '',
     isTokenValidated: !!(localStorage.getItem('tp_token') || localStorage.getItem('sm_token')),
     appsScriptUrl: import.meta.env.VITE_API_URL || '',
+
+    // Link Pembelian/Upgrade (Sesuaikan dengan URL pembelian kamu)
+    buyTokenUrl: 'https://tokopedia.com', 
 
     // Audio & Mascot State
     isMusicOn: JSON.parse(localStorage.getItem('sm_music') ?? 'true'),
@@ -26,9 +29,11 @@ export const useGameStore = defineStore('game', {
   }),
 
   getters: {
-    // Getter pengaman untuk router / vue view (memastikan token terverifikasi)
     isAuthorized: (state) => state.isTokenValidated && !!state.token,
     
+    // Cek apakah akun aktif menggunakan token demo
+    isDemoAccount: (state) => state.token.trim().toUpperCase() === 'DEMO2026',
+
     currentLevel: (state) => state.levels[state.currentLevelIndex] || state.levels[0],
     isGameFullyCompleted: (state) => state.completedLevels.length >= state.levels.length,
     starsEarnedInCurrentLevel: (state) => {
@@ -37,13 +42,14 @@ export const useGameStore = defineStore('game', {
   },
 
   actions: {
-    // Action Validasi Token (Mekanisme JSONP disesuaikan dengan Apps Script Lama)
     async validateToken(inputToken) {
       if (!inputToken) return false;
 
+      const formattedToken = inputToken.trim().toUpperCase();
+
       // Bypass langsung jika token DEMO2026
-      if (inputToken === "DEMO2026") {
-        this.setAuth(inputToken);
+      if (formattedToken === "DEMO2026") {
+        this.setAuth(formattedToken);
         return true;
       }
 
@@ -54,9 +60,8 @@ export const useGameStore = defineStore('game', {
           document.body.removeChild(script);
           delete window[callbackName];
 
-          // Cek kelayakan dari Apps Script Lama (hanya butuh data.isValid === true)
           if (data && data.isValid) {
-            this.setAuth(inputToken);
+            this.setAuth(formattedToken);
             resolve(true);
           } else {
             resolve(false);
@@ -66,8 +71,7 @@ export const useGameStore = defineStore('game', {
         const script = document.createElement('script');
         const sheetName = import.meta.env.VITE_SHEET_NAME || '';
 
-        // Request ke Google Apps Script lama menggunakan JSONP
-        script.src = `${this.appsScriptUrl}?token=${encodeURIComponent(inputToken)}&sheetName=${encodeURIComponent(sheetName)}&callback=${callbackName}`;
+        script.src = `${this.appsScriptUrl}?token=${encodeURIComponent(formattedToken)}&sheetName=${encodeURIComponent(sheetName)}&callback=${callbackName}`;
         
         script.onerror = () => {
           if (document.body.contains(script)) {
@@ -96,11 +100,19 @@ export const useGameStore = defineStore('game', {
     },
 
     selectLevel(id) {
+      // Jika mode demo dan mencoba akses level > 1, cegah aksesnya
+      if (this.isDemoAccount && id > 1) {
+        this.mascotMessage = 'Akses Terbatas! Silakan beli token resmi untuk membuka semua level.';
+        return false;
+      }
+
       const index = this.levels.findIndex(l => l.id === id);
       if (index !== -1) {
         this.currentLevelIndex = index;
         this.resetLevelState();
+        return true;
       }
+      return false;
     },
 
     resetLevelState() {
@@ -121,7 +133,13 @@ export const useGameStore = defineStore('game', {
             this.completedLevels.push(this.currentLevel.id);
             this.saveToStorage();
           }
-          this.mascotMessage = 'Hore! Kamu berhasil menyelesaikan level ini! 🌟';
+
+          // Pesan khusus setelah menyelesaikan Level 1 pada versi Demo
+          if (this.isDemoAccount) {
+            this.mascotMessage = 'Hebat! Kamu telah menyelesaikan Level Demo. Beli token penuh untuk lanjut!';
+          } else {
+            this.mascotMessage = 'Hore! Kamu berhasil menyelesaikan level ini! 🌟';
+          }
         } else {
           this.mascotMessage = 'Hebat! Lanjutkan bentuk berikutnya!';
         }
@@ -129,6 +147,12 @@ export const useGameStore = defineStore('game', {
     },
 
     nextLevel() {
+      // Mencegah demo lanjut ke level berikutnya lewat tombol Next/Lanjut
+      if (this.isDemoAccount) {
+        this.mascotMessage = 'Silakan beli token resmi untuk membuka level selanjutnya!';
+        return;
+      }
+
       if (this.currentLevelIndex < this.levels.length - 1) {
         this.currentLevelIndex++;
         this.resetLevelState();
@@ -159,7 +183,6 @@ export const useGameStore = defineStore('game', {
       localStorage.setItem('sm_narrator', JSON.stringify(this.isNarratorOn));
     },
 
-    // Action Tambahan untuk Modal Pengaturan
     toggleSettings() {
       this.isSettingsOpen = !this.isSettingsOpen;
     },
