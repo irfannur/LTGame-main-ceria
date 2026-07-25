@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "title": "Mengenal Lingkaran",
+    "description": "Pasangkan bentuk lingkaran ya!",
+    "background": "sky",
+    "difficulty": 1,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" }
+    ],
+    "targets": [
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Lingkaran & Persegi",
+    "description": "Pasangkan dua bentuk ini!",
+    "background": "sky",
+    "difficulty": 1,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🟦", "label": "Persegi" }
+    ],
+    "targets": [
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Persegi" },
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Tiga Bentuk Dasar",
+    "description": "Ayo pilih tempat yang pas!",
+    "background": "sky",
+    "difficulty": 1,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🟦", "label": "Persegi" },
+      { "id": "s3", "type": "triangle", "color": "#10b981", "size": "normal", "rotation": 0, "targetId": "t3", "display": "🔺", "label": "Segitiga" }
+    ],
+    "targets": [
+      { "id": "t3", "type": "triangle", "size": "normal", "rotation": 0, "label": "Segitiga" },
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" },
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Persegi" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Bintang Bersinar",
+    "description": "Bintang suka di tempatnya!",
+    "background": "sky",
+    "difficulty": 2,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🟦", "label": "Persegi" },
+      { "id": "s3", "type": "triangle", "color": "#10b981", "size": "normal", "rotation": 0, "targetId": "t3", "display": "🔺", "label": "Segitiga" },
+      { "id": "s4", "type": "star", "color": "#f59e0b", "size": "normal", "rotation": 0, "targetId": "t4", "display": "⭐", "label": "Bintang" }
+    ],
+    "targets": [
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" },
+      { "id": "t4", "type": "star", "size": "normal", "rotation": 0, "label": "Bintang" },
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Persegi" },
+      { "id": "t3", "type": "triangle", "size": "normal", "rotation": 0, "label": "Segitiga" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Bentuk Hati",
+    "description": "Mana bayangan bentuk hati?",
+    "background": "sky",
+    "difficulty": 2,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🟦", "label": "Persegi" },
+      { "id": "s3", "type": "triangle", "color": "#10b981", "size": "normal", "rotation": 0, "targetId": "t3", "display": "🔺", "label": "Segitiga" },
+      { "id": "s4", "type": "star", "color": "#f59e0b", "size": "normal", "rotation": 0, "targetId": "t4", "display": "⭐", "label": "Bintang" },
+      { "id": "s5", "type": "heart", "color": "#ec4899", "size": "normal", "rotation": 0, "targetId": "t5", "display": "🩷", "label": "Hati" }
+    ],
+    "targets": [
+      { "id": "t5", "type": "heart", "size": "normal", "rotation": 0, "label": "Hati" },
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" },
+      { "id": "t3", "type": "triangle", "size": "normal", "rotation": 0, "label": "Segitiga" },
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Persegi" },
+      { "id": "t4", "type": "star", "size": "normal", "rotation": 0, "label": "Bintang" }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Bentuk Oval",
+    "description": "Oval bentuknya seperti telur!",
+    "background": "sky",
+    "difficulty": 2,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🟦", "label": "Persegi" },
+      { "id": "s3", "type": "triangle", "color": "#10b981", "size": "normal", "rotation": 0, "targetId": "t3", "display": "🔺", "label": "Segitiga" },
+      { "id": "s4", "type": "star", "color": "#f59e0b", "size": "normal", "rotation": 0, "targetId": "t4", "display": "⭐", "label": "Bintang" },
+      { "id": "s5", "type": "heart", "color": "#ec4899", "size": "normal", "rotation": 0, "targetId": "t5", "display": "🩷", "label": "Hati" },
+      { "id": "s6", "type": "oval", "color": "#8b5cf6", "size": "normal", "rotation": 0, "targetId": "t6", "display": "🟣", "label": "Oval" }
+    ],
+    "targets": [
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" },
+      { "id": "t6", "type": "oval", "size": "normal", "rotation": 0, "label": "Oval" },
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Persegi" },
+      { "id": "t5", "type": "heart", "size": "normal", "rotation": 0, "label": "Hati" },
+      { "id": "t3", "type": "triangle", "size": "normal", "rotation": 0, "label": "Segitiga" },
+      { "id": "t4", "type": "star", "size": "normal", "rotation": 0, "label": "Bintang" }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Belah Ketupat",
+    "description": "Pasangkan belah ketupat manis ini!",
+    "background": "sky",
+    "difficulty": 3,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🟦", "label": "Persegi" },
+      { "id": "s3", "type": "triangle", "color": "#10b981", "size": "normal", "rotation": 0, "targetId": "t3", "display": "🔺", "label": "Segitiga" },
+      { "id": "s4", "type": "star", "color": "#f59e0b", "size": "normal", "rotation": 0, "targetId": "t4", "display": "⭐", "label": "Bintang" },
+      { "id": "s5", "type": "heart", "color": "#ec4899", "size": "normal", "rotation": 0, "targetId": "t5", "display": "🩷", "label": "Hati" },
+      { "id": "s6", "type": "oval", "color": "#8b5cf6", "size": "normal", "rotation": 0, "targetId": "t6", "display": "🟣", "label": "Oval" },
+      { "id": "s7", "type": "rhombus", "color": "#06b6d4", "size": "normal", "rotation": 0, "targetId": "t7", "display": "🔷", "label": "Belah Ketupat" }
+    ],
+    "targets": [
+      { "id": "t7", "type": "rhombus", "size": "normal", "rotation": 0, "label": "Belah Ketupat" },
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" },
+      { "id": "t3", "type": "triangle", "size": "normal", "rotation": 0, "label": "Segitiga" },
+      { "id": "t6", "type": "oval", "size": "normal", "rotation": 0, "label": "Oval" },
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Persegi" },
+      { "id": "t5", "type": "heart", "size": "normal", "rotation": 0, "label": "Hati" },
+      { "id": "t4", "type": "star", "size": "normal", "rotation": 0, "label": "Bintang" }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Besar dan Kecil",
+    "description": "Perhatikan ukurannya ya!",
+    "background": "sky",
+    "difficulty": 3,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "large", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran Besar" },
+      { "id": "s2", "type": "circle", "color": "#f87171", "size": "small", "rotation": 0, "targetId": "t2", "display": "🔴", "label": "Lingkaran Kecil" },
+      { "id": "s3", "type": "square", "color": "#3b82f6", "size": "large", "rotation": 0, "targetId": "t3", "display": "🟦", "label": "Persegi Besar" },
+      { "id": "s4", "type": "square", "color": "#60a5fa", "size": "small", "rotation": 0, "targetId": "t4", "display": "🟦", "label": "Persegi Kecil" }
+    ],
+    "targets": [
+      { "id": "t2", "type": "circle", "size": "small", "rotation": 0, "label": "Lingkaran Kecil" },
+      { "id": "t1", "type": "circle", "size": "large", "rotation": 0, "label": "Lingkaran Besar" },
+      { "id": "t4", "type": "square", "size": "small", "rotation": 0, "label": "Persegi Kecil" },
+      { "id": "t3", "type": "square", "size": "large", "rotation": 0, "label": "Persegi Besar" }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Bentuk Diputar",
+    "description": "Ayo cocokkan bentuk yang miring!",
+    "background": "sky",
+    "difficulty": 3,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "triangle", "color": "#10b981", "size": "normal", "rotation": 45, "targetId": "t1", "display": "🔺", "label": "Segitiga Miring" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 30, "targetId": "t2", "display": "🟦", "label": "Persegi Miring" },
+      { "id": "s3", "type": "rectangle", "color": "#a855f7", "size": "normal", "rotation": 90, "targetId": "t3", "display": "🟣", "label": "Persegi Panjang Tegak" }
+    ],
+    "targets": [
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 30, "label": "Persegi Miring" },
+      { "id": "t1", "type": "triangle", "size": "normal", "rotation": 45, "label": "Segitiga Miring" },
+      { "id": "t3", "type": "rectangle", "size": "normal", "rotation": 90, "label": "Persegi Panjang Tegak" }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Tantangan 10 Bentuk",
+    "description": "Wah, ada banyak bentuk sekali!",
+    "background": "sky",
+    "difficulty": 4,
+    "mode": "standard",
+    "shapes": [
+      { "id": "s1", "type": "circle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔴", "label": "Lingkaran" },
+      { "id": "s2", "type": "square", "color": "#3b82f6", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🟦", "label": "Persegi" },
+      { "id": "s3", "type": "triangle", "color": "#10b981", "size": "normal", "rotation": 0, "targetId": "t3", "display": "🔺", "label": "Segitiga" },
+      { "id": "s4", "type": "star", "color": "#f59e0b", "size": "normal", "rotation": 0, "targetId": "t4", "display": "⭐", "label": "Bintang" },
+      { "id": "s5", "type": "heart", "color": "#ec4899", "size": "normal", "rotation": 0, "targetId": "t5", "display": "🩷", "label": "Hati" },
+      { "id": "s6", "type": "oval", "color": "#8b5cf6", "size": "normal", "rotation": 0, "targetId": "t6", "display": "🟣", "label": "Oval" },
+      { "id": "s7", "type": "rhombus", "color": "#06b6d4", "size": "normal", "rotation": 0, "targetId": "t7", "display": "🔷", "label": "Belah Ketupat" },
+      { "id": "s8", "type": "pentagon", "color": "#f97316", "size": "normal", "rotation": 0, "targetId": "t8", "display": "⬟", "label": "Segi Lima" },
+      { "id": "s9", "type": "hexagon", "color": "#84cc16", "size": "normal", "rotation": 0, "targetId": "t9", "display": "⬢", "label": "Segi Enam" },
+      { "id": "s10", "type": "rectangle", "color": "#6366f1", "size": "normal", "rotation": 0, "targetId": "t10", "display": "🟧", "label": "Persegi Panjang" }
+    ],
+    "targets": [
+      { "id": "t5", "type": "heart", "size": "normal", "rotation": 0, "label": "Hati" },
+      { "id": "t1", "type": "circle", "size": "normal", "rotation": 0, "label": "Lingkaran" },
+      { "id": "t8", "type": "pentagon", "size": "normal", "rotation": 0, "label": "Segi Lima" },
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Persegi" },
+      { "id": "t10", "type": "rectangle", "size": "normal", "rotation": 0, "label": "Persegi Panjang" },
+      { "id": "t3", "type": "triangle", "size": "normal", "rotation": 0, "label": "Segitiga" },
+      { "id": "t7", "type": "rhombus", "size": "normal", "rotation": 0, "label": "Belah Ketupat" },
+      { "id": "t4", "type": "star", "size": "normal", "rotation": 0, "label": "Bintang" },
+      { "id": "t9", "type": "hexagon", "size": "normal", "rotation": 0, "label": "Segi Enam" },
+      { "id": "t6", "type": "oval", "size": "normal", "rotation": 0, "label": "Oval" }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Susun Rumah",
+    "description": "Mari membangun rumah impian!",
+    "background": "grass",
+    "difficulty": 3,
+    "mode": "puzzle",
+    "shapes": [
+      { "id": "s1", "type": "square", "color": "#f97316", "size": "large", "rotation": 0, "targetId": "t1", "display": "🟧", "label": "Dinding Rumah" },
+      { "id": "s2", "type": "triangle", "color": "#ef4444", "size": "large", "rotation": 0, "targetId": "t2", "display": "🔺", "label": "Atap Rumah" },
+      { "id": "s3", "type": "circle", "color": "#3b82f6", "size": "small", "rotation": 0, "targetId": "t3", "display": "🔵", "label": "Jendela Rumah" }
+    ],
+    "targets": [
+      { "id": "t2", "type": "triangle", "size": "large", "rotation": 0, "label": "Atap", "x": 50, "y": 25 },
+      { "id": "t1", "type": "square", "size": "large", "rotation": 0, "label": "Dinding", "x": 50, "y": 60 },
+      { "id": "t3", "type": "circle", "size": "small", "rotation": 0, "label": "Jendela", "x": 50, "y": 55 }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Susun Roket",
+    "description": "Siap meluncur ke luar angkasa!",
+    "background": "space",
+    "difficulty": 3,
+    "mode": "puzzle",
+    "shapes": [
+      { "id": "s1", "type": "triangle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🔺", "label": "Ujung Roket" },
+      { "id": "s2", "type": "rectangle", "color": "#94a3b8", "size": "large", "rotation": 90, "targetId": "t2", "display": "🏢", "label": "Badan Roket" },
+      { "id": "s3", "type": "circle", "color": "#38bdf8", "size": "small", "rotation": 0, "targetId": "t3", "display": "🔵", "label": "Kaca Roket" },
+      { "id": "s4", "type": "heart", "color": "#f59e0b", "size": "small", "rotation": 180, "targetId": "t4", "display": "🔥", "label": "Api Roket" }
+    ],
+    "targets": [
+      { "id": "t1", "type": "triangle", "size": "normal", "rotation": 0, "label": "Ujung", "x": 50, "y": 20 },
+      { "id": "t2", "type": "rectangle", "size": "large", "rotation": 90, "label": "Badan", "x": 50, "y": 50 },
+      { "id": "t3", "type": "circle", "size": "small", "rotation": 0, "label": "Kaca", "x": 50, "y": 45 },
+      { "id": "t4", "type": "heart", "size": "small", "rotation": 180, "label": "Api", "x": 50, "y": 80 }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Susun Mobil",
+    "description": "Bikin mobil keren yuk!",
+    "background": "road",
+    "difficulty": 4,
+    "mode": "puzzle",
+    "shapes": [
+      { "id": "s1", "type": "rectangle", "color": "#3b82f6", "size": "large", "rotation": 0, "targetId": "t1", "display": "🚙", "label": "Badan Mobil" },
+      { "id": "s2", "type": "square", "color": "#60a5fa", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🔲", "label": "Atap Mobil" },
+      { "id": "s3", "type": "circle", "color": "#1e293b", "size": "small", "rotation": 0, "targetId": "t3", "display": "⚫", "label": "Roda Depan" },
+      { "id": "s4", "type": "circle", "color": "#1e293b", "size": "small", "rotation": 0, "targetId": "t4", "display": "⚫", "label": "Roda Belakang" }
+    ],
+    "targets": [
+      { "id": "t2", "type": "square", "size": "normal", "rotation": 0, "label": "Atap", "x": 45, "y": 30 },
+      { "id": "t1", "type": "rectangle", "size": "large", "rotation": 0, "label": "Badan", "x": 50, "y": 55 },
+      { "id": "t3", "type": "circle", "size": "small", "rotation": 0, "label": "Roda Kiri", "x": 35, "y": 75 },
+      { "id": "t4", "type": "circle", "size": "small", "rotation": 0, "label": "Roda Kanan", "x": 65, "y": 75 }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Susun Ikan",
+    "description": "Bantu ikan berenang di laut!",
+    "background": "sea",
+    "difficulty": 4,
+    "mode": "puzzle",
+    "shapes": [
+      { "id": "s1", "type": "oval", "color": "#f97316", "size": "large", "rotation": 0, "targetId": "t1", "display": "🟧", "label": "Badan Ikan" },
+      { "id": "s2", "type": "triangle", "color": "#f59e0b", "size": "normal", "rotation": 90, "targetId": "t2", "display": "🔺", "label": "Ekor Ikan" },
+      { "id": "s3", "type": "circle", "color": "#ffffff", "size": "small", "rotation": 0, "targetId": "t3", "display": "⚪", "label": "Mata Ikan" }
+    ],
+    "targets": [
+      { "id": "t2", "type": "triangle", "size": "normal", "rotation": 90, "label": "Ekor", "x": 75, "y": 50 },
+      { "id": "t1", "type": "oval", "size": "large", "rotation": 0, "label": "Badan", "x": 45, "y": 50 },
+      { "id": "t3", "type": "circle", "size": "small", "rotation": 0, "label": "Mata", "x": 30, "y": 45 }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Magic World",
+    "description": "Taman bermain penuh keajaiban!",
+    "background": "magic",
+    "difficulty": 5,
+    "mode": "puzzle",
+    "shapes": [
+      { "id": "s1", "type": "square", "color": "#f97316", "size": "normal", "rotation": 0, "targetId": "t1", "display": "🏠", "label": "Rumah" },
+      { "id": "s2", "type": "triangle", "color": "#ef4444", "size": "normal", "rotation": 0, "targetId": "t2", "display": "🔺", "label": "Atap" },
+      { "id": "s3", "type": "circle", "color": "#eab308", "size": "normal", "rotation": 0, "targetId": "t3", "display": "☀️", "label": "Matahari" },
+      { "id": "s4", "type": "oval", "color": "#22c55e", "size": "normal", "rotation": 0, "targetId": "t4", "display": "🌳", "label": "Pohon" },
+      { "id": "s5", "type": "star", "color": "#ec4899", "size": "normal", "rotation": 0, "targetId": "t5", "display": "🎈", "label": "Balon" }
+    ],
+    "targets": [
+      { "id": "t3", "type": "circle", "size": "normal", "rotation": 0, "label": "Matahari", "x": 20, "y": 20 },
+      { "id": "t5", "type": "star", "size": "normal", "rotation": 0, "label": "Balon", "x": 80, "y": 25 },
+      { "id": "t2", "type": "triangle", "size": "normal", "rotation": 0, "label": "Atap", "x": 40, "y": 50 },
+      { "id": "t1", "type": "square", "size": "normal", "rotation": 0, "label": "Rumah", "x": 40, "y": 70 },
+      { "id": "t4", "type": "oval", "size": "normal", "rotation": 0, "label": "Pohon", "x": 75, "y": 65 }
+    ]
+  }
+]

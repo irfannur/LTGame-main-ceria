@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-kid {
+    font-family: 'Fredoka', cursive, sans-serif;
+  }
+}
+
+/* Animasi Kustom */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes cloud-move {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-cloud-slow {
+  animation: cloud-move 35s linear infinite;
+}
+
+.animate-cloud-fast {
+  animation: cloud-move 20s linear infinite;
+}
