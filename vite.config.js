@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'ShapeMatcher - Pasangkan Bentuk',
-        short_name: 'ShapeMatcher',
-        description: 'Game Edukasi Anak Mengenal Bentuk & Warna',
+        name: 'LTS - Main Ceria',
+        short_name: 'Langkah Tumbuh Studio',
+        description: 'Game Edukasi Anak Mengenal Bentuk, Warna & Kendaraan',
         theme_color: '#38bdf8',
         background_color: '#f0f9ff',
         display: 'standalone',
