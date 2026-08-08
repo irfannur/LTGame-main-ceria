@@ -1,48 +1,51 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { useGameStore } from '../stores/gameStore';
+import { useAuthStore } from '@/stores/authStore';
+
+// Common Views
+import TokenAccessView from '@/views/TokenAccessView.vue';
+import HubView from '@/views/HubView.vue';
+
+// Game Views
+import ShapeLevels from '@/views/shape-matcher/LevelSelectView.vue';
+import ShapeGame from '@/views/shape-matcher/GameView.vue';
+import ColorGame from '@/views/color-pop/GameView.vue';
+import ColorLevels from '@/views/color-pop/LevelSelectView.vue';
+import TransportGame from '@/views/smart-transport/GameView.vue';
+import TransportLevels from '@/views/smart-transport/LevelSelect.vue';
+
+const routes = [
+  { path: '/access', name: 'TokenAccess', component: TokenAccessView, meta: { requiresAuth: false } },
+  { path: '/', name: 'Hub', component: HubView, meta: { requiresAuth: true } },
+
+  // --- GAME 1: Shape Matcher ---
+  { path: '/shape-matcher/levels', name: 'ShapeLevels', component: ShapeLevels, meta: { requiresAuth: true } },
+  { path: '/shape-matcher/play', name: 'ShapeGame', component: ShapeGame, meta: { requiresAuth: true } },
+
+  // --- GAME 2: Color Pop ---
+  { path: '/color-pop/levels', name: 'ColorLevels', component: ColorLevels, meta: { requiresAuth: true } },
+  { path: '/color-pop/play', name: 'ColorGame', component: ColorGame, meta: { requiresAuth: true } },
+
+  // --- GAME 3: Smart Transport ---
+  { path: '/smart-transport/levels', name: 'TransportLevels', component: TransportLevels, meta: { requiresAuth: true } },
+  { path: '/smart-transport/play', name: 'TransportGame', component: TransportGame, meta: { requiresAuth: true } },
+
+  { path: '/:pathMatch(.*)*', redirect: '/' }
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [
-    { 
-      path: '/gate', 
-      name: 'gate', 
-      component: () => import('../views/GateView.vue') 
-    },
-    { 
-      path: '/', 
-      name: 'home', 
-      component: () => import('../views/HomeView.vue'),
-      meta: { requiresAuth: true } 
-    },
-    { 
-      path: '/levels', 
-      name: 'levels', 
-      component: () => import('../views/LevelSelectView.vue'),
-      meta: { requiresAuth: true } 
-    },
-    { 
-      path: '/play', 
-      name: 'play', 
-      component: () => import('../views/GameView.vue'),
-      meta: { requiresAuth: true } 
-    }
-  ]
+  routes
 });
 
-// Guard Pengaman Token
+// Proteksi Akses Token
 router.beforeEach((to, from, next) => {
-  const store = useGameStore();
+  const authStore = useAuthStore();
 
-  // Jika halaman butuh token & user belum terverifikasi -> Pindah ke Gate
-  if (to.meta.requiresAuth && !store.isAuthorized) {
-    next({ name: 'gate' });
-  } 
-  // Jika user sudah terverifikasi dan mencoba ke halaman gate -> Langsung lempar ke Home
-  else if (to.name === 'gate' && store.isAuthorized) {
-    next({ name: 'home' });
-  } 
-  else {
+  if (to.meta.requiresAuth && !authStore.isAuthorized) {
+    next('/access'); // Belum login token -> lempar ke login
+  } else if (to.path === '/access' && authStore.isAuthorized) {
+    next('/'); // Sudah login token -> lempar ke Hub Dashboard
+  } else {
     next();
   }
 });

@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "theme": "Mengenal Warna Merah",
+    "colors": ["red", "yellow"],
+    "maxBalloons": 4,
+    "speedMin": 1.2,
+    "speedMax": 1.5,
+    "targetScore": 10,
+    "spawnInterval": 2200
+  },
+  {
+    "id": 2,
+    "theme": "Merah dan Biru",
+    "colors": ["red", "blue"],
+    "maxBalloons": 5,
+    "speedMin": 1.3,
+    "speedMax": 1.6,
+    "targetScore": 20,
+    "spawnInterval": 2000
+  },
+  {
+    "id": 3,
+    "theme": "Merah, Biru, Kuning",
+    "colors": ["red", "blue", "yellow"],
+    "maxBalloons": 6,
+    "speedMin": 1.4,
+    "speedMax": 1.8,
+    "targetScore": 20,
+    "spawnInterval": 1800
+  },
+  {
+    "id": 4,
+    "theme": "Tambah Hijau",
+    "colors": ["red", "blue", "yellow", "green"],
+    "maxBalloons": 7,
+    "speedMin": 1.4,
+    "speedMax": 2.0,
+    "targetScore": 25,
+    "spawnInterval": 1600
+  },
+  {
+    "id": 5,
+    "theme": "Tambah Ungu",
+    "colors": ["red", "blue", "yellow", "green", "purple"],
+    "maxBalloons": 8,
+    "speedMin": 1.5,
+    "speedMax": 2.2,
+    "targetScore": 30,
+    "spawnInterval": 1500
+  },
+  {
+    "id": 6,
+    "theme": "Tambah Oranye",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange"],
+    "maxBalloons": 9,
+    "speedMin": 1.6,
+    "speedMax": 2.4,
+    "targetScore": 35,
+    "spawnInterval": 1400
+  },
+  {
+    "id": 7,
+    "theme": "Semua Warna Dasar",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange"],
+    "maxBalloons": 10,
+    "speedMin": 1.8,
+    "speedMax": 2.6,
+    "targetScore": 35,
+    "spawnInterval": 1200
+  },
+  {
+    "id": 8,
+    "theme": "Warna Campuran (Pink)",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange", "pink"],
+    "maxBalloons": 11,
+    "speedMin": 2.0,
+    "speedMax": 2.8,
+    "targetScore": 35,
+    "spawnInterval": 1100
+  },
+  {
+    "id": 9,
+    "theme": "Semua Warna (Cokelat)",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange", "pink", "brown"],
+    "maxBalloons": 12,
+    "speedMin": 2.2,
+    "speedMax": 3.2,
+    "targetScore": 40,
+    "spawnInterval": 1000
+  },
+  {
+    "id": 10,
+    "theme": "Master Warna",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange", "pink", "brown", "black", "white"],
+    "maxBalloons": 15,
+    "speedMin": 2.5,
+    "speedMax": 3.8,
+    "targetScore": 50,
+    "spawnInterval": 800
+  },
+  {
+    "id": 11,
+    "theme": "Kecepatan Kilat",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange", "pink"],
+    "maxBalloons": 15,
+    "speedMin": 2.8,
+    "speedMax": 4.0,
+    "targetScore": 50,
+    "spawnInterval": 750
+  },
+  {
+    "id": 12,
+    "theme": "Kontras Gelap Terang",
+    "colors": ["black", "white", "yellow", "pink", "purple", "brown"],
+    "maxBalloons": 16,
+    "speedMin": 3.0,
+    "speedMax": 4.2,
+    "targetScore": 60,
+    "spawnInterval": 700
+  },
+  {
+    "id": 13,
+    "theme": "Hujan Balon",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange", "pink", "brown", "black", "white"],
+    "maxBalloons": 18,
+    "speedMin": 3.2,
+    "speedMax": 4.5,
+    "targetScore": 65,
+    "spawnInterval": 650
+  },
+  {
+    "id": 14,
+    "theme": "Tantangan Super",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange", "pink", "brown", "black", "white"],
+    "maxBalloons": 20,
+    "speedMin": 3.5,
+    "speedMax": 4.8,
+    "targetScore": 75,
+    "spawnInterval": 600
+  },
+  {
+    "id": 15,
+    "theme": "Legenda Pelangi",
+    "colors": ["red", "blue", "yellow", "green", "purple", "orange", "pink", "brown", "black", "white"],
+    "maxBalloons": 22,
+    "speedMin": 3.8,
+    "speedMax": 5.2,
+    "targetScore": 100,
+    "spawnInterval": 500
+  }
+]

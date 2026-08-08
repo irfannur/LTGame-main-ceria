@@ -1,0 +1,248 @@
+[
+  {
+    "id": 1,
+    "title": "Tebak Suara Mobil",
+    "type": "sound",
+    "instruction": "Dengar baik-baik... Bremm... Tin... Tin... Kendaraan apa ini?",
+    "onomatope": "Bremm... Tin... Tin... 🚗",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚗 Mobil", "emoji": "🚗", "isCorrect": true },
+      { "id": "b", "label": "✈️ Pesawat", "emoji": "✈️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Tebak Suara Helikopter",
+    "type": "sound",
+    "instruction": "Whup... Whup... Whup... Siapa yang terbang ini?",
+    "onomatope": "Whup... Whup... Whup... 🚁",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚢 Kapal Laut", "emoji": "🚢", "isCorrect": false },
+      { "id": "b", "label": "🚁 Helikopter", "emoji": "🚁", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Warna Kendaraan",
+    "type": "color",
+    "instruction": "Mana kendaraan yang berwarna MERAH?",
+    "onomatope": "Cari yang warna Merah! 🚒",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚒 Mobil Pemadam", "emoji": "🚒", "isCorrect": true },
+      { "id": "b", "label": "🚚 Truk Kuning", "emoji": "/img/truck.jpg", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Siluet Kereta Api",
+    "type": "silhouette",
+    "instruction": "Cocokkan bayangannya! Kendaraan mana yang pas?",
+    "onomatope": "Bayangan apakah ini? 🚂",
+    "background": "rail",
+    "choices": [
+      { "id": "a", "label": "🚌 Bus", "emoji": "🚌", "isCorrect": false },
+      { "id": "b", "label": "🚂 Kereta Api", "emoji": "🚂", "isCorrect": true },
+      { "id": "c", "label": "🚗 Mobil", "emoji": "🚗", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Kendaraan Penyelamat",
+    "type": "function",
+    "instruction": "Wiuw... Wiuw... Mana kendaraan yang membantu orang sakit?",
+    "onomatope": "Wiuw... Wiuw... 🚑",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚑 Ambulans", "emoji": "🚑", "isCorrect": true },
+      { "id": "b", "label": "🚓 Polisi", "emoji": "🚓", "isCorrect": false },
+      { "id": "c", "label": "🏍️ Motor", "emoji": "🏍️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Kendaraan Besar",
+    "type": "counting",
+    "instruction": "Mana kendaraan yang rodanya paling besar?",
+    "onomatope": "Roda Besar! 🚜",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚜 Traktor", "emoji": "/img/tracktor.jpg", "isCorrect": true },
+      { "id": "b", "label": "🚗 Mobil", "emoji": "🚗", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Hitung Roda",
+    "type": "counting",
+    "instruction": "Kendaraan mana yang memiliki dua roda?",
+    "onomatope": "Cari yang beroda dua! 🏍️",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚗 Mobil", "emoji": "🚗", "isCorrect": false },
+      { "id": "b", "label": "🏍️ Sepeda Motor", "emoji": "🏍️", "isCorrect": true },
+      { "id": "c", "label": "🛺 Bajaj", "emoji": "/img/bajaj.png", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Rumah Kendaraan",
+    "type": "habitat",
+    "instruction": "Siapa yang berjalan dan berlayar di atas air?",
+    "onomatope": "Berenang di laut! 🚢",
+    "background": "sea",
+    "choices": [
+      { "id": "a", "label": "🚂 Kereta", "emoji": "🚂", "isCorrect": false },
+      { "id": "b", "label": "🚢 Kapal Laut", "emoji": "🚢", "isCorrect": true },
+      { "id": "c", "label": "✈️ Pesawat", "emoji": "✈️", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Jalur Kendaraan",
+    "type": "location",
+    "instruction": "Kendaraan mana yang berjalan di atas rel besi?",
+    "onomatope": "Chugga... Chugga... 🚂",
+    "background": "rail",
+    "choices": [
+      { "id": "a", "label": "🚌 Bus Kota", "emoji": "🚌", "isCorrect": false },
+      { "id": "b", "label": "🚁 Helikopter", "emoji": "🚁", "isCorrect": false },
+      { "id": "c", "label": "🚂 Kereta Api", "emoji": "🚂", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Misi Luar Angkasa",
+    "type": "location",
+    "instruction": "Kendaraan luar biasa mana yang bisa pergi terbang ke bulan?",
+    "onomatope": "Terbang tinggi ke bulan! 🚀",
+    "background": "space",
+    "choices": [
+      { "id": "a", "label": "🚀 Roket", "emoji": "🚀", "isCorrect": true },
+      { "id": "b", "label": "🎈 Balon Udara", "emoji": "🎈", "isCorrect": false },
+      { "id": "c", "label": "🚢 Kapal", "emoji": "🚢", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Tebak Suara Kereta Api",
+    "type": "sound",
+    "instruction": "Dengar baik-baik... Tut... Tut... Gujes... Gujes... Siapa dia?",
+    "onomatope": "Tut... Tut... 🚂",
+    "background": "rail",
+    "choices": [
+      { "id": "a", "label": "🚂 Kereta Api", "emoji": "🚂", "isCorrect": true },
+      { "id": "b", "label": "🚌 Bus", "emoji": "🚌", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Warna Langit",
+    "type": "color",
+    "instruction": "Mana kendaraan terbang yang berwarna KUNING?",
+    "onomatope": "Kuning cerah! 🛩️",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🛸 UFO Perak", "emoji": "🛸", "isCorrect": false },
+      { "id": "b", "label": "Pesawat Kuning", "emoji": "/img/pesawat_kuning.png", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Siluet Mobil Balap",
+    "type": "silhouette",
+    "instruction": "Lihat bayangan ini! Bentuk mobil super cepat apa ini?",
+    "onomatope": "Wusss... Ngeeeng... 🏎️",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🏎️ Mobil Balap", "emoji": "🏎️", "isCorrect": true },
+      { "id": "b", "label": "🚜 Traktor", "emoji": "🚜", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Kendaraan Roda Tiga",
+    "type": "counting",
+    "instruction": "Hitung rodanya! Mana kendaraan yang rodanya ada tiga?",
+    "onomatope": "Tiga roda berputar! 🛺",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🏍️ Motor", "emoji": "🏍️", "isCorrect": false },
+      { "id": "b", "label": "🛺 Becak Bajaj", "emoji": "/img/bajaj.png", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Penyelamat Air",
+    "type": "function",
+    "instruction": "Ada kapal yang menolong orang di laut. Mana Jet Ski penyelamat?",
+    "onomatope": "Wuzzz di air! 🚤",
+    "background": "sea",
+    "choices": [
+      { "id": "a", "label": "🚤 Jet Ski", "emoji": "🚤", "isCorrect": true },
+      { "id": "b", "label": "🚂 Kereta", "emoji": "🚂", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Terbang di Udara",
+    "type": "habitat",
+    "instruction": "Siapa yang terbang tinggi melintasi awan di langit?",
+    "onomatope": "Terbang tinggi! ✈️",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚢 Kapal", "emoji": "🚢", "isCorrect": false },
+      { "id": "b", "label": "✈️ Pesawat Terbang", "emoji": "✈️", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Angkutan Barang",
+    "type": "function",
+    "instruction": "Mana kendaraan besar yang bertugas membawa pasir dan batu?",
+    "onomatope": "Truk Angkut! 🚚",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚚 Truk Besar", "emoji": "/img/truck.jpg", "isCorrect": true },
+      { "id": "b", "label": "🚲 Sepeda Kecil", "emoji": "🚲", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Bawah Laut",
+    "type": "location",
+    "instruction": "Kendaraan besi apa yang bisa menyelam masuk ke dalam air laut?",
+    "onomatope": "Blub... Blub... 🦪",
+    "background": "sea",
+    "choices": [
+      { "id": "a", "label": "🚀 Roket", "emoji": "🚀", "isCorrect": false },
+      { "id": "b", "label": "Kapal Selam", "emoji": "/img/selam.png", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Kendaraan Kayuh",
+    "type": "counting",
+    "instruction": "Mana kendaraan sehat yang berjalan menggunakan kekuatan kayuh kaki?",
+    "onomatope": "Kring... Kring... 🚲",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚲 Sepeda", "emoji": "🚲", "isCorrect": true },
+      { "id": "b", "label": "🚓 Polisi", "emoji": "🚓", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Kendaraan Konstruksi",
+    "type": "function",
+    "instruction": "Mana kendaraan yang bertugas mengeruk tanah dan batu besar?",
+    "onomatope": "Ngek... Nguuu... 🏗️",
+    "background": "sky",
+    "choices": [
+      { "id": "a", "label": "🚌 Bus", "emoji": "🚌", "isCorrect": false },
+      { "id": "b", "label": "Ekskavator Beko", "emoji": "/img/excavator.jpg", "isCorrect": true }
+    ]
+  }
+]
