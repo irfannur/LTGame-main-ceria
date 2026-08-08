@@ -1,8 +1,8 @@
 <template>
-  <!-- Menambahkan overflow-y-auto secara tegas pada wrapper utama -->
-  <div class="w-full min-h-screen h-full overflow-y-auto overflow-x-hidden flex flex-col items-center justify-between p-4 sm:p-6 bg-gradient-to-b from-sky-300 via-sky-200 to-amber-100 font-kid relative select-none">
+  <!-- PERBAIKAN: Gunakan min-h-screen (bukan h-screen) dan hilangkan overflow-hidden agar mobile bisa di-scroll -->
+  <div class="w-full min-h-screen flex flex-col items-center justify-between p-4 sm:p-6 bg-gradient-to-b from-sky-300 via-sky-200 to-amber-100 font-kid relative select-none">
     
-    <!-- Latar Belakang Dekoratif (Fixed agar tidak bergeser saat di-scroll) -->
+    <!-- Latar Belakang Dekoratif (Floating Elements) -->
     <div class="fixed inset-0 pointer-events-none overflow-hidden">
       <div class="absolute top-12 left-10 text-4xl sm:text-6xl opacity-25 animate-pulse">✨</div>
       <div class="absolute bottom-20 left-12 text-3xl sm:text-5xl opacity-20 animate-bounce">🎈</div>
@@ -130,7 +130,7 @@
           <div class="bg-gradient-to-r from-amber-300 to-amber-400 p-3 sm:p-5 flex items-center justify-between border-b-4 border-amber-500 shrink-0">
             <div class="flex items-center gap-2">
               <span class="text-xl sm:text-3xl">🎈</span>
-              <h2 class="text-base sm:text-2xl font-black text-amber-950 uppercase tracking-wide">Tentang Game</h2>
+              <h2 class="text-base sm:text-2xl font-black text-amber-950 uppercase tracking-wide">Tentang "Langkah Tumbuh Studio"</h2>
             </div>
             <button 
               @click="showInfoModal = false"
