@@ -11,17 +11,17 @@ export const useAuthStore = defineStore('auth', {
 
   getters: {
     isAuthorized: (state) => state.isValidated && !!state.token && !!state.email,
-    isDemoAccount: (state) => state.token.trim().toUpperCase() === 'DEMO2026',
+    isDemoAccount: (state) => state.token.trim().toLowerCase() === 'demo2026',
   },
 
   actions: {
     async validateToken(inputToken, inputEmail) {
       if (!inputToken || !inputEmail) return false;
-      const formattedToken = inputToken.trim().toUpperCase();
+      const formattedToken = inputToken.trim().toLowerCase();
       const formattedEmail = inputEmail.trim().toLowerCase();
 
       // Mode Demo Bypass
-      if (formattedToken === "DEMO2026") {
+      if (formattedToken === "demo2026") {
         this.setAuth(formattedToken, formattedEmail);
         return true;
       }

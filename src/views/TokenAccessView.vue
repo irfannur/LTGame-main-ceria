@@ -33,7 +33,7 @@
               v-model="inputEmail"
               type="email"
               placeholder="Email"
-              class="w-full text-center text-base sm:text-lg font-bold bg-sky-50/80 border-4 border-sky-300 focus:border-amber-400 focus:bg-white text-sky-900 rounded-2xl py-3 px-4 outline-none transition-all placeholder:text-slate-400 placeholder:font-bold shadow-inner"
+              class="w-full text-center text-base lowercase sm:text-lg font-bold bg-sky-50/80 border-4 border-sky-300 focus:border-amber-400 focus:bg-white text-sky-900 rounded-2xl py-3 px-4 outline-none transition-all placeholder:text-slate-400 placeholder:font-bold shadow-inner"
               :disabled="isLoading"
             />
           </div>
@@ -44,7 +44,7 @@
               v-model="inputToken"
               :type="showPassword ? 'text' : 'password'"
               placeholder="Password"
-              class="w-full text-center text-base sm:text-lg font-black tracking-wider uppercase bg-sky-50/80 border-4 border-sky-300 focus:border-amber-400 focus:bg-white text-sky-900 rounded-2xl py-3 px-10 outline-none transition-all placeholder:text-slate-400 placeholder:font-bold placeholder:normal-case shadow-inner"
+              class="w-full text-center text-base lowercase sm:text-lg font-black tracking-wider bg-sky-50/80 border-4 border-sky-300 focus:border-amber-400 focus:bg-white text-sky-900 rounded-2xl py-3 px-10 outline-none transition-all placeholder:text-slate-400 placeholder:font-bold placeholder:normal-case shadow-inner"
               :disabled="isLoading"
             />
             <button 
