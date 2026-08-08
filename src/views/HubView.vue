@@ -1,8 +1,9 @@
 <template>
-  <div class="w-screen h-screen flex flex-col items-center justify-between p-4 sm:p-6 bg-gradient-to-b from-sky-300 via-sky-200 to-amber-100 font-kid overflow-hidden relative select-none">
+  <!-- Menambahkan overflow-y-auto secara tegas pada wrapper utama -->
+  <div class="w-full min-h-screen h-full overflow-y-auto overflow-x-hidden flex flex-col items-center justify-between p-4 sm:p-6 bg-gradient-to-b from-sky-300 via-sky-200 to-amber-100 font-kid relative select-none">
     
-    <!-- Latar Belakang Dekoratif (Floating Elements) -->
-    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <!-- Latar Belakang Dekoratif (Fixed agar tidak bergeser saat di-scroll) -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
       <div class="absolute top-12 left-10 text-4xl sm:text-6xl opacity-25 animate-pulse">✨</div>
       <div class="absolute bottom-20 left-12 text-3xl sm:text-5xl opacity-20 animate-bounce">🎈</div>
       <div class="absolute top-1/3 right-10 text-4xl sm:text-6xl opacity-25 animate-pulse delay-700">🌟</div>
@@ -10,7 +11,7 @@
     </div>
 
     <!-- Header Dashboard -->
-    <header class="w-full max-w-5xl flex items-center justify-between z-10 gap-2 sm:gap-3">
+    <header class="w-full max-w-5xl flex items-center justify-between z-10 gap-2 sm:gap-3 mb-4 sm:mb-0">
       <!-- Info Profile Email & Status -->
       <div class="bg-white/90 backdrop-blur-md px-3 sm:px-5 py-2 rounded-2xl border-4 border-sky-300 shadow-md flex items-center gap-2 max-w-[55%] sm:max-w-none">
         <span class="text-lg sm:text-xl">👤</span>
@@ -42,8 +43,8 @@
       </div>
     </header>
 
-    <!-- Judul Hub -->
-    <main class="w-full max-w-5xl flex flex-col items-center justify-center my-auto z-10">
+    <!-- Judul Hub & Card Pilihan Game -->
+    <main class="w-full max-w-5xl flex flex-col items-center justify-center my-auto z-10 py-4">
       <div class="text-center mb-6 sm:mb-8">
         <div class="inline-block bg-amber-300/80 border-2 border-amber-400 text-amber-900 font-black text-xs sm:text-sm px-4 py-1 rounded-full mb-2 shadow-sm">
           ARENA BERMAIN & BELAJAR 🎯
@@ -114,7 +115,7 @@
     </main>
 
     <!-- Branding Footer / Copyright Studio -->
-    <footer class="z-10 mt-2">
+    <footer class="z-10 mt-4 mb-2">
       <div class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border-2 border-amber-300/80 px-4 py-1.5 rounded-full shadow-sm text-xs font-black text-slate-600 hover:bg-white transition-all cursor-default">
         <span>🌱</span>
         <span>Crafted by <strong class="text-amber-600">Langkah Tumbuh Studio</strong></span>
@@ -123,29 +124,25 @@
 
     <!-- MODAL INFO PEMASARAN GAME -->
     <Teleport to="body">
-      <div v-if="showInfoModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-50 flex items-center justify-center p-4 font-kid select-none animate-fade-in">
-        <div class="bg-white rounded-3xl border-8 border-amber-400 max-w-2xl w-full max-h-[85vh] shadow-2xl flex flex-col relative overflow-hidden">
+      <div v-if="showInfoModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-50 flex items-center justify-center p-3 sm:p-4 font-kid select-none animate-fade-in">
+        <div class="bg-white rounded-3xl border-4 sm:border-8 border-amber-400 max-w-2xl w-full max-h-[90vh] shadow-2xl flex flex-col relative overflow-hidden">
           
-          <!-- Header Modal -->
-          <div class="bg-gradient-to-r from-amber-300 to-amber-400 p-4 sm:p-5 flex items-center justify-between border-b-4 border-amber-500 shrink-0">
+          <div class="bg-gradient-to-r from-amber-300 to-amber-400 p-3 sm:p-5 flex items-center justify-between border-b-4 border-amber-500 shrink-0">
             <div class="flex items-center gap-2">
-              <span class="text-2xl sm:text-3xl">🎈</span>
-              <h2 class="text-xl sm:text-2xl font-black text-amber-950 uppercase tracking-wide">Tentang "Langkah Tumbuh Studio"</h2>
+              <span class="text-xl sm:text-3xl">🎈</span>
+              <h2 class="text-base sm:text-2xl font-black text-amber-950 uppercase tracking-wide">Tentang Game</h2>
             </div>
             <button 
               @click="showInfoModal = false"
-              class="w-10 h-10 bg-white/80 hover:bg-white text-rose-600 rounded-2xl font-black text-xl border-2 border-amber-500 flex items-center justify-center shadow-sm active:scale-90 transition cursor-pointer"
+              class="w-8 h-8 sm:w-10 sm:h-10 bg-white/80 hover:bg-white text-rose-600 rounded-2xl font-black text-lg sm:text-xl border-2 border-amber-500 flex items-center justify-center shadow-sm active:scale-90 transition cursor-pointer"
             >
               ✕
             </button>
           </div>
 
-          <!-- Body Modal (Scrollable Content) -->
-          <div class="p-4 sm:p-6 overflow-y-auto space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed">
-            
-            <!-- Headline Utama -->
-            <div class="bg-sky-50 border-4 border-sky-300 p-4 rounded-2xl text-center">
-              <h3 class="text-lg sm:text-xl font-black text-sky-600 mb-1">
+          <div class="p-4 sm:p-6 overflow-y-auto min-h-0 overscroll-contain space-y-4 sm:space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <div class="bg-sky-50 border-4 border-sky-300 p-3 sm:p-4 rounded-2xl text-center">
+              <h3 class="text-base sm:text-xl font-black text-sky-600 mb-1">
                 Ubah Screen Time Jadi Playtime Berkualitas! 🎈✨
               </h3>
               <p class="font-bold text-xs sm:text-sm text-sky-800">
@@ -153,9 +150,8 @@
               </p>
             </div>
 
-            <!-- Deskripsi Singkat -->
             <div>
-              <h4 class="font-black text-amber-600 text-base sm:text-lg mb-1 flex items-center gap-1.5">
+              <h4 class="font-black text-amber-600 text-sm sm:text-lg mb-1 flex items-center gap-1.5">
                 <span>📌</span> Deskripsi
               </h4>
               <p class="font-medium text-slate-600 text-xs sm:text-sm">
@@ -163,15 +159,13 @@
               </p>
             </div>
 
-            <!-- 3 Game Seru -->
             <div>
-              <h4 class="font-black text-amber-600 text-base sm:text-lg mb-3 flex items-center gap-1.5">
+              <h4 class="font-black text-amber-600 text-sm sm:text-lg mb-3 flex items-center gap-1.5">
                 <span>🎮</span> 3 Game Seru & Manfaat Perkembangannya
               </h4>
               <div class="space-y-3">
-                
                 <div class="bg-rose-50 border-2 border-rose-300 p-3 rounded-2xl">
-                  <div class="font-black text-rose-600 text-sm sm:text-base mb-0.5 flex items-center gap-1">
+                  <div class="font-black text-rose-600 text-xs sm:text-base mb-0.5 flex items-center gap-1">
                     <span>🔴</span> ColorPop (Pecah Balon Warna)
                   </div>
                   <p class="text-xs sm:text-sm font-medium text-slate-600">
@@ -180,7 +174,7 @@
                 </div>
 
                 <div class="bg-amber-50 border-2 border-amber-300 p-3 rounded-2xl">
-                  <div class="font-black text-amber-600 text-sm sm:text-base mb-0.5 flex items-center gap-1">
+                  <div class="font-black text-amber-600 text-xs sm:text-base mb-0.5 flex items-center gap-1">
                     <span>🧩</span> ShapeMatcher (Pasang Bentuk Geometri)
                   </div>
                   <p class="text-xs sm:text-sm font-medium text-slate-600">
@@ -189,20 +183,18 @@
                 </div>
 
                 <div class="bg-emerald-50 border-2 border-emerald-300 p-3 rounded-2xl">
-                  <div class="font-black text-emerald-600 text-sm sm:text-base mb-0.5 flex items-center gap-1">
+                  <div class="font-black text-emerald-600 text-xs sm:text-base mb-0.5 flex items-center gap-1">
                     <span>🚗</span> Tebak Gambar Transportasi (10 Level Tantangan)
                   </div>
                   <p class="text-xs sm:text-sm font-medium text-slate-600">
                     <strong>Manfaat:</strong> Mengembangkan daya ingat (memori visual & auditori), memperluas kosakata, serta melatih logika kategorisasi (membedakan kendaraan darat, laut, dan udara beserta suaranya).
                   </p>
                 </div>
-
               </div>
             </div>
 
-            <!-- Mengapa Orang Tua Menyukai -->
             <div>
-              <h4 class="font-black text-amber-600 text-base sm:text-lg mb-3 flex items-center gap-1.5">
+              <h4 class="font-black text-amber-600 text-sm sm:text-lg mb-3 flex items-center gap-1.5">
                 <span>🛡️</span> Mengapa Orang Tua Menyukai langkahTumbuh ?
               </h4>
               <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm font-medium">
@@ -225,21 +217,18 @@
               </ul>
             </div>
 
-            <!-- Call To Action Bottom -->
             <div class="bg-gradient-to-r from-emerald-400 to-teal-500 text-white p-4 rounded-2xl text-center shadow-md">
-              <div class="font-black text-sm sm:text-base mb-1">🎁 Sekali Bayar untuk Akses Tanpa Batas!</div>
-              <p class="text-xs sm:text-sm font-bold opacity-90">
+              <div class="font-black text-xs sm:text-base mb-1">🎁 Sekali Bayar untuk Akses Tanpa Batas!</div>
+              <p class="text-[11px] sm:text-sm font-bold opacity-90">
                 Dampingi langkah emas tumbuh kembang si Kecil hari ini.
               </p>
             </div>
-
           </div>
 
-          <!-- Footer Modal -->
           <div class="p-3 sm:p-4 bg-slate-50 border-t-2 border-slate-200 text-center shrink-0">
             <button 
               @click="showInfoModal = false"
-              class="w-full bg-amber-400 hover:bg-amber-500 text-amber-950 font-black py-2.5 rounded-2xl shadow-[0_4px_0_#d97706] active:shadow-none active:translate-y-1 transition cursor-pointer text-sm uppercase tracking-wider"
+              class="w-full bg-amber-400 hover:bg-amber-500 text-amber-950 font-black py-2.5 rounded-2xl shadow-[0_4px_0_#d97706] active:shadow-none active:translate-y-1 transition cursor-pointer text-xs sm:text-sm uppercase tracking-wider"
             >
               Tutup Info & Mulai Main 🚀
             </button>
